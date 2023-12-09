@@ -1,0 +1,32 @@
+<header class="p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+            {% block topmenu %}
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{% url 'reports-items' %}" class="nav-link px-2 text-white">Reports</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">Templates </a></li>
+                <li><a href="#" class="nav-link px-2 text-white">Chatter Box</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">Documents</a></li>
+            </ul>
+            {% endblock %}
+            <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                    aria-label="Search">
+            </form> -->
+            <div class="d-flex" style="margin-right: 25px;">
+                <div class="input-group input-group-sm">
+                    <input class="form-control" type="search" id="search" placeholder="Live search..."
+                        aria-label="Search">
+                    <!-- <a href="{% url 'client-index' %}" class="btn btn-secondary btn-sm"><i
+                            class="fas fa-sync-alt"></i></a> -->
+                </div>
+            </div>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+        </div>
+    </div>
+</header>

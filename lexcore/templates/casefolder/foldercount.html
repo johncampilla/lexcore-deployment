@@ -1,0 +1,47 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}
+Case Folders
+{% endblock title %}
+{% block content %}
+<div class="d-flex">
+    {% include 'layout/sidebar.html' %}
+    <div class="w-100">
+        {% include 'layout/header.html' %}
+        <div class="my-3 mx-3">
+            <div class="card">
+                <div class="card-header text-center" style=" color: black; background-color:rgb(228, 248, 188);">Case
+                    Folders
+                </div>
+            </div>
+            <table class="table-hover table-bordered table-sm small table">
+                <thead class="table-primary text-center">
+                    <tr">
+                        <th style="width:3%">#</th>
+                        <th style="width:85%">(Practice Areas) Department</th>
+                        <th style="width:7%;"># Of Matters</th>
+                        <th style="width:5%;">Selected</th>
+
+                        </tr>
+                </thead>
+                {% for folder in folders %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ folder.folder__folder_type__folder }}</td>
+                    <td class="text-center">{{ folder.NoOfMatters }}</td>
+                    <td>
+                        <a class="btn btn-info btn-sm btn-icon-split"
+                            href="{% url 'selected-folder' folder.folder__folder_type__id %}" title="Delete Folder">
+                            <span class="icon text-white-20">
+                                <i class="far fa-hand-pointer"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
