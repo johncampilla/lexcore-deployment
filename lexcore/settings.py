@@ -131,18 +131,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-# setting up the deployment to aws
-STATIC_ROOT = BASE_DIR / "staticfiles"
+# # setting up the deployment to aws
+# STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-# setting up the deployment to aws
+# STORAGES = {
+#     "default": {
+#         "BACKEND": "django.core.files.storage.FileSystemStorage",
+#     },
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
+# # setting up the deployment to aws
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "lexcore/static"),)
 # STATICFILES_DIRS = [
