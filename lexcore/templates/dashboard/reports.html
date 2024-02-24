@@ -1,0 +1,97 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}
+Dashboard
+{% endblock title %}
+{% block content %}
+<div class="d-flex">
+    {% include 'layout/sidebar.html' %}
+    <div class="w-100">
+        {% include 'layout/header.html' %}
+        <div class="my-3">
+            <div class="col-md-3 offset-md-1">
+                <div class="card">
+                    <div class=" card-header text-center mb-2"
+                        style=" color: black; background-color:rgb(228, 248, 188);">
+                        <b>Reports</b>
+                        <p id="text">LexWare</p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mb-2 border-2" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Client Module
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">Client List By Country</button></li>
+                            <li><button class="dropdown-item" type="button">Client List By Industry</button></li>
+                            <li><button class="dropdown-item" type="button">Client List By Types Folders</button></li>
+                            <li><button class="dropdown-item" type="button">CLient List By Matters/Engagements</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Matter Module
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">Non-IP Matter List By Type Of Cases</button>
+                            </li>
+                            <li><button class="dropdown-item" type="button">IP Matter List By Types of
+                                    Applications</button></li>
+                            <li><button class="dropdown-item" type="button">Matter List By Handling Lawyer</button></li>
+                            <li><button class="dropdown-item" type="button">Matter List By Client</button></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mt-2 mb-2" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Calendaring Module
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">List Of Due Dates For the Month</button>
+                            </li>
+                            <li><button class="dropdown-item" type="button">List Of Due Dates for the given period of
+                                    time</button></li>
+                            <li><button class="dropdown-item" type="button">List Of Lapsed Due Dates</button></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mb-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Activity/Docketing Module
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">List Of Activities For the Month</button>
+                            </li>
+                            <li><button class="dropdown-item" type="button">Daily Service Report By Lawyer</button></li>
+                            <li><button class="dropdown-item" type="button">Summary Count By Activity Code</button></li>
+                            <li><button class="dropdown-item" type="button">Summary Count Of Office Action For the
+                                    Month</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mb-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Billings & Payments Module
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button">Unpaid As Of Today</button></li>
+                            <li><button class="dropdown-item" type="button">Billing Register For The Month</button></li>
+                            <li><button class="dropdown-item" type="button">Payment Register For the Month</button></li>
+                            <li><button class="dropdown-item" type="button">Billing Performance Summary By Handling
+                                    Lawyer for a Given Period Of Time</button></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<!-- <script src="{% static 'assets/js/reports.js' %}"></script> -->
+{% endblock %}
